@@ -33,20 +33,6 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/so
 RUN sudo apt update && sudo apt install yarn
 
 # ------------------------------------------------------------
-# Install Python language support
-# ------------------------------------------------------------
-
-RUN apt-get update && apt-get install -y python python-pip
-RUN pip install python-language-server
-
-# ------------------------------------------------------------
-# Install Ruby language support
-# ------------------------------------------------------------
-
-RUN apt-get -y install ruby ruby-dev zlib1g-dev
-RUN gem install solargraph
-
-# ------------------------------------------------------------
 # Build the app
 # ------------------------------------------------------------
 
